@@ -9,27 +9,31 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 50px;
-            background-color: #e6e6fa;
+            background-color: #fff8dc;
             color: #333;
         }
         h1 {
-            color: #fff8dc;
+            color: #87CEEB;
         }
         p {
             font-size: 18px;
-            color: #fff8dc;
+            color: #87CEEB;
         }
         img {
             width: 300px;
             height: auto;
             margin-top: 20px;
-            float: left; /* Change to 'right' to float the image to the right */
-            margin-right: 20px; /* Add space between image and text */
+            margin-right: 20px;
         }
         .additional-text {
             font-size: 16px;
-            color: #fff8dc;
+            color: #87CEEB;
             margin-top: 10px;
+        }
+        /* Create a flex container for side-by-side images */
+        .image-container {
+            display: flex;
+            justify-content: center;
         }
     </style>
 </head>
@@ -38,8 +42,11 @@
     <p>I used a simple HTML code for my page.</p>
     <div class="additional-text">
         <p>This is my professor - Dr. Hubbard-James</p>
+        <p>Next to it you can see my classmates</p>
     </div>
-    <img src="https://www.agnesscott.edu/assets/images/people/faculty/james-hodari_600x600.jpg">
+    <div class="image-container">
+        <img src="https://www.agnesscott.edu/assets/images/people/faculty/james-hodari_600x600.jpg">
+        <img src="https://media.timeout.com/images/105207533/image.jpg">
+    </div>
 </body>
 </html>
-
