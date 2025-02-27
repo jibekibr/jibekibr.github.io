@@ -21,8 +21,8 @@
             color: #8B0000;
         }
         img {
-            width: 600px;
-            height: 600px;
+            width: 400px; /* Smaller images */
+            height: auto;
             margin-top: 10px;
             border: 2px solid #8B0000;
             border-radius: 8px;
@@ -38,67 +38,75 @@
             justify-content: space-between;
             gap: 50px;
             padding: 20px;
-            position: relative; /* Important for absolute positioning of stars */
         }
         .image-wrapper {
             text-align: center;
-            position: relative;
         }
 
-        /* Add star shapes randomly using ::before */
-        .image-wrapper::before {
+        /* Add star shapes randomly in the background */
+        .star {
             content: '★';
             position: absolute;
-            top: 10%;
-            left: 20%;
             font-size: 2rem;
             color: gold;
             animation: starAnimation 10s infinite;
-        }
-
-        .image-wrapper::after {
-            content: '★';
-            position: absolute;
-            top: 50%;
-            left: 80%;
-            font-size: 2rem;
-            color: gold;
-            animation: starAnimation 12s infinite;
-        }
-
-        /* Additional random star animation */
-        .image-wrapper .star1 {
-            content: '★';
-            position: absolute;
-            top: 15%;
-            left: 10%;
-            font-size: 1.5rem;
-            color: gold;
-            animation: starAnimation 8s infinite;
-        }
-        .image-wrapper .star2 {
-            content: '★';
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            font-size: 1.5rem;
-            color: gold;
-            animation: starAnimation 12s infinite;
-        }
-        .image-wrapper .star3 {
-            content: '★';
-            position: absolute;
-            top: 70%;
-            left: 60%;
-            font-size: 1.5rem;
-            color: gold;
-            animation: starAnimation 15s infinite;
         }
 
         @keyframes starAnimation {
             0% { opacity: 0; transform: scale(0); }
             50% { opacity: 1; transform: scale(1.2); }
             100% { opacity: 0; transform: scale(0); }
+        }
+
+        /* Create multiple stars */
+        .star1 {
+            top: 5%;
+            left: 10%;
+        }
+
+        .star2 {
+            top: 15%;
+            left: 30%;
+        }
+
+        .star3 {
+            top: 25%;
+            left: 50%;
+        }
+
+        .star4 {
+            top: 35%;
+            left: 70%;
+        }
+
+        .star5 {
+            top: 45%;
+            left: 80%;
+        }
+
+        .star6 {
+            top: 55%;
+            left: 20%;
+        }
+
+        .star7 {
+            top: 65%;
+            left: 40%;
+        }
+
+        .star8 {
+            top: 75%;
+            left: 60%;
+        }
+
+        .star9 {
+            top: 85%;
+            left: 90%;
+        }
+
+        .star10 {
+            top: 95%;
+            left: 15%;
         }
 
         .trinket-embed {
@@ -131,11 +139,7 @@
             <div class="additional-text">
                 <p>This is my coolest coding professor - Dr. Hubbard-James</p>
             </div>
-            <img src="https://www.agnesscott.edu/assets/images/people/faculty/james-hodari_600x600.jpg" alt="Professor" width="600" height="600">
-            <!-- Random Stars -->
-            <div class="star1"></div>
-            <div class="star2"></div>
-            <div class="star3"></div>
+            <img src="https://www.agnesscott.edu/assets/images/people/faculty/james-hodari_600x600.jpg" alt="Professor" width="400" height="400">
         </div>
 
         <!-- Right-side image -->
@@ -143,11 +147,7 @@
             <div class="additional-text">
                 <p>That's how we usually study:</p>
             </div>
-            <img src="https://www.msubillings.edu/citycollege/programs/img/CPADNew.jpg" alt="Classmates" width="600" height="600">
-            <!-- Random Stars -->
-            <div class="star1"></div>
-            <div class="star2"></div>
-            <div class="star3"></div>
+            <img src="https://www.msubillings.edu/citycollege/programs/img/CPADNew.jpg" alt="Classmates" width="400" height="400">
         </div>
     </div>
     
@@ -168,8 +168,21 @@
     <iframe src="https://trinket.io/embed/python/5227f9269895" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
     
     <p> Made by Jibek Ibraeva:)</p>
+
+    <!-- Stars in the background -->
+    <div class="star star1"></div>
+    <div class="star star2"></div>
+    <div class="star star3"></div>
+    <div class="star star4"></div>
+    <div class="star star5"></div>
+    <div class="star star6"></div>
+    <div class="star star7"></div>
+    <div class="star star8"></div>
+    <div class="star star9"></div>
+    <div class="star star10"></div>
 </body>
 </html>
+
 
 
 
