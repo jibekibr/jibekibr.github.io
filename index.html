@@ -11,11 +11,7 @@
             margin: 50px;
             background-color: #fff8dc;
             color: #333;
-            background-image: url('https://img.icons8.com/ios/50/000000/star.png'); /* Add small star images as background */
-            background-repeat: repeat; /* Repeat the stars in the background */
-            background-position: center;
-            background-size: 30px; /* Adjust size of the stars */
-        }
+            position: relative;
         }
         h1 {
             color: #FF7F50;
@@ -25,11 +21,11 @@
             color: #8B0000;
         }
         img {
-            width: 300px;
-            height: auto;
+            width: 600px;
+            height: 600px;
             margin-top: 10px;
-            border: 2px solid #8B0000; /* Border around the image */
-            border-radius: 8px; /* Rounded corners for the border */
+            border: 2px solid #8B0000;
+            border-radius: 8px;
         }
         .additional-text {
             font-size: 16px;
@@ -39,24 +35,83 @@
         
         .image-container {
             display: flex;
-            justify-content: space-between; /* Spacing out the images */
-            gap: 50px; /* Adjust the gap between the images */
+            justify-content: space-between;
+            gap: 50px;
             padding: 20px;
+            position: relative; /* Important for absolute positioning of stars */
         }
         .image-wrapper {
             text-align: center;
+            position: relative;
         }
+
+        /* Add star shapes randomly using ::before */
+        .image-wrapper::before {
+            content: '★';
+            position: absolute;
+            top: 10%;
+            left: 20%;
+            font-size: 2rem;
+            color: gold;
+            animation: starAnimation 10s infinite;
+        }
+
+        .image-wrapper::after {
+            content: '★';
+            position: absolute;
+            top: 50%;
+            left: 80%;
+            font-size: 2rem;
+            color: gold;
+            animation: starAnimation 12s infinite;
+        }
+
+        /* Additional random star animation */
+        .image-wrapper .star1 {
+            content: '★';
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            font-size: 1.5rem;
+            color: gold;
+            animation: starAnimation 8s infinite;
+        }
+        .image-wrapper .star2 {
+            content: '★';
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            font-size: 1.5rem;
+            color: gold;
+            animation: starAnimation 12s infinite;
+        }
+        .image-wrapper .star3 {
+            content: '★';
+            position: absolute;
+            top: 70%;
+            left: 60%;
+            font-size: 1.5rem;
+            color: gold;
+            animation: starAnimation 15s infinite;
+        }
+
+        @keyframes starAnimation {
+            0% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0; transform: scale(0); }
+        }
+
         .trinket-embed {
-        width: 70%; 
-        height: 500px; 
-        border: 2px solid #ccc; 
-        border-radius: 8px;
-        margin: 20px auto;
+            width: 70%; 
+            height: 500px; 
+            border: 2px solid #ccc; 
+            border-radius: 8px;
+            margin: 20px auto;
         }
         iframe {
-            width: 70%; /* Reduced size */
-            height: 500px; /* Adjusted height */
-            border: 2px solid #ccc; /* Border around Trinket */
+            width: 70%;
+            height: 500px;
+            border: 2px solid #ccc;
             border-radius: 8px;
             margin: 20px auto;
         }
@@ -77,6 +132,10 @@
                 <p>This is my coolest coding professor - Dr. Hubbard-James</p>
             </div>
             <img src="https://www.agnesscott.edu/assets/images/people/faculty/james-hodari_600x600.jpg" alt="Professor" width="600" height="600">
+            <!-- Random Stars -->
+            <div class="star1"></div>
+            <div class="star2"></div>
+            <div class="star3"></div>
         </div>
 
         <!-- Right-side image -->
@@ -85,6 +144,10 @@
                 <p>That's how we usually study:</p>
             </div>
             <img src="https://www.msubillings.edu/citycollege/programs/img/CPADNew.jpg" alt="Classmates" width="600" height="600">
+            <!-- Random Stars -->
+            <div class="star1"></div>
+            <div class="star2"></div>
+            <div class="star3"></div>
         </div>
     </div>
     
@@ -100,12 +163,14 @@
     <p>Kiva Data computing project:</p>
 
     <iframe src="https://trinket.io/embed/python/ecbc42770d01" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    
     <p>Drawing a circle with Turtle:</p>
     <iframe src="https://trinket.io/embed/python/5227f9269895" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    
     <p> Made by Jibek Ibraeva:)</p>
-
 </body>
 </html>
+
 
 
 
